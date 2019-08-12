@@ -25,7 +25,16 @@ namespace Cyberpunk_Cop_Data_PADD
              *   -Print out a ticket with all the above information
              *   -Prints a seperate ticket for tickets/fines
              *---------------------------------------------------------
+             * 
+             * To Do List
+             * ---------------------------------------------------------
+             *  -Make all sleep times random
+             *  -Make loading database timer based off % that was RNG
+             *  -add various indexes
+             * 
+             * ---------------------------------------------------------
              */
+           
 
 
             //Begin Boot Sequence
@@ -109,14 +118,26 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Loading, Please Wait.....");
             Thread.Sleep(sleepTimer);
 
-            Console.WriteLine("ID Foud, Loading......");
+            Console.WriteLine("ID Found, Loading......");
             Thread.Sleep(sleepTimer);
 
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
+            string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
+            string bountyAmount = "None Available";
+            string misdemeanors = "1x Drunk in Public";
+            string felonies = "None on record";
 
-            Console.WriteLine("Citizen ID: " + citizenID.ToUpper);
-            Console.WriteLine("Registered Name: " + citizenName.ToUpper + " " + citizenSurname.ToUpper);
+            Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
+            Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
+            Console.WriteLine("Wanted Status: " + wantedStatus.ToUpper());
+            Console.WriteLine("Bounty: " + bountyAmount.ToUpper());
+            Console.WriteLine("List of previous violations: ");
+            Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
+            Console.WriteLine("Felonies: " + felonies.ToUpper());
+            Console.ReadLine();
+
+
 
 
 

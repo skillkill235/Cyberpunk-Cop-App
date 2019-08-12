@@ -64,7 +64,7 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Please Enter User ID:");
             string userId = Console.ReadLine();
             Console.WriteLine("Please Enter Password:");
-            string = userPassword = Console.ReadLine();
+            string userPassword = Console.ReadLine();
             Console.WriteLine("Connecting to GlobaNet Services.....");
             //add random sleep time here
             Console.WriteLine("Credentials Accepted, Welcome User " + userId + "!");

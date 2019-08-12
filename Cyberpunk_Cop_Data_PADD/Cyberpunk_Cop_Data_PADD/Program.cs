@@ -5,11 +5,14 @@ namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
-        public int MakeRandomSleepTime(Random ran, 500, 10000);
+        public int MakeRandomSleepTime(Random ran, int range1, int range2);
         {
-            var sleepTime = ran.Next(500, 10000);
+            var sleepTime = ran.Next(range1, range2);
             return sleepTime;
         }
+    private const int lowerRange = 500;
+    private const int middleRange = 5000;
+    private const int upperRange =10000
 
 
         static void Main(string[] args)
@@ -54,14 +57,14 @@ namespace Cyberpunk_Cop_Data_PADD
             Random random = new Random();
            
 
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000)); //pauses the program for a random interval
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange)); //pauses the program for a random interval
             
             Console.WriteLine("Loading Memory...... 64kb");
             Console.WriteLine("Loading Memory...... 128kb");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange, upperRange));
             Console.WriteLine("Loading Memory...... 256kb");
             Console.WriteLine("Loading Memory...... 512kb");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
@@ -101,16 +104,16 @@ namespace Cyberpunk_Cop_Data_PADD
 
             }
 
-        }   while (key.Key != ConsoleKey.Enter); //stopes receiving ketys once enter is pressed
+        }   while (key.Key != ConsoleKey.Enter); //stops receiving keys once enter is pressed
             Console.WriteLine();
 
 
             Console.WriteLine("Connecting to GlobaNet Services.....");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
 
             Console.WriteLine("Loading Database, Please Wait.....");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
 
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
@@ -123,10 +126,10 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Citizen ID: " + citizenID);
 
             Console.WriteLine("Loading, Please Wait.....");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
             Console.WriteLine("ID Found, Loading......");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames

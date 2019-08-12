@@ -34,13 +34,21 @@ namespace Cyberpunk_Cop_Data_PADD
              *   -Display all the information above
              *   -Print out a ticket with all the above information
              *   -Prints a seperate ticket for tickets/fines
+             *   -Stores the two above tickets in .txt files
              *---------------------------------------------------------
              * 
              * To Do List
              * ---------------------------------------------------------
+             *  
+             *  MUST DO:
              *  -Make all sleep times random
              *  -Make loading database timer based off % that was RNG
              *  -add various indexes
+             *  
+             *  WOULD LIKE:
+             *  -Good ascii art
+             *  -more flavor
+             *  -do colored text
              * 
              * ---------------------------------------------------------
              */
@@ -123,9 +131,9 @@ namespace Cyberpunk_Cop_Data_PADD
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
             string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
-            string bountyAmount = "None Available";
-            string misdemeanors = "1x Drunk in Public";
-            string felonies = "None on record";
+            string bountyAmount = "None Available"; //only if wanted
+            string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
+            string felonies = "None on record"; //same as line above
 
             Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
             Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());

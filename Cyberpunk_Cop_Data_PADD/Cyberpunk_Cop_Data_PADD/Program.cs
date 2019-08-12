@@ -5,7 +5,7 @@ namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
-        public int MakeRandomSleepTime(Random ran, int 500, int 10000)
+        public int MakeRandomSleepTime(Random ran, 500, 10000);
         {
             var sleepTime = ran.Next(500, 10000);
             return sleepTime;
@@ -86,7 +86,25 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Please Enter User ID:");
             string userId = Console.ReadLine();
             Console.WriteLine("Please Enter Password:");
-            string userPassword = Console.ReadLine();
+
+
+        ConsoleKeyInfo key; string userPassword = "";
+        do
+        {
+
+            key = Console.ReadKey(true);
+            if (key.Key != ConsoleKey.Backspace) //backspace should not work
+            {
+
+                userPassword += key.KeyChar;
+                Console.Write("*");
+
+            }
+
+        }   while (key.Key != ConsoleKey.Enter); //stopes receiving ketys once enter is pressed
+            Console.WriteLine();
+
+
             Console.WriteLine("Connecting to GlobaNet Services.....");
             Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);

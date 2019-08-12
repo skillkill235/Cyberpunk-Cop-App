@@ -75,8 +75,48 @@ namespace Cyberpunk_Cop_Data_PADD
             Thread.Sleep(sleepTimer);
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
 
+            Console.WriteLine("Loading Database, Please Wait.....");
+            Thread.Sleep(sleepTimer);
 
+            int loadingOne = random.Next(5, 15);
+            int loadingTwo = random.Next(16, 25);
+            int loadingThree = random.Next(26, 50);
+            int loadingFour = random.Next(51, 75);
+            int loadingFive = random.Next(76, 99);
+            int loadingSix = 100;
 
+            Console.WriteLine("Loading: " + loadingOne +"%");
+            Thread.Sleep(sleepTimer);
+            Console.WriteLine("Loading: " + loadingTwo + "%");
+            Thread.Sleep(sleepTimer);
+            Console.WriteLine("Loading: " + loadingThree+ "%");
+            Thread.Sleep(sleepTimer);
+            Console.WriteLine("Loading: " + loadingFour + "%");
+            Thread.Sleep(sleepTimer);
+            Console.WriteLine("Loading: " + loadingFive + "%");
+            Thread.Sleep(sleepTimer);
+            Console.WriteLine("Loading: " + loadingSix + "%");
+
+            Console.WriteLine("Loading Ticketing and Informational Database (TID)");
+            Thread.Sleep(sleepTimer);
+
+            Console.WriteLine("TID Loaded");
+            Console.WriteLine("User ID: " + userId);
+            Console.Write("Enter 9 character alphanumeric ID Number: ");
+            string citizenID = Console.ReadLine();
+            Console.WriteLine("Citizen ID: " + citizenID);
+
+            Console.WriteLine("Loading, Please Wait.....");
+            Thread.Sleep(sleepTimer);
+
+            Console.WriteLine("ID Foud, Loading......");
+            Thread.Sleep(sleepTimer);
+
+            string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
+            string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
+
+            Console.WriteLine("Citizen ID: " + citizenID.ToUpper);
+            Console.WriteLine("Registered Name: " + citizenName.ToUpper + " " + citizenSurname.ToUpper);
 
 
 

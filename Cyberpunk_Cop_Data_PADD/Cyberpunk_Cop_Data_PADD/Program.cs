@@ -5,9 +5,9 @@ namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
-        public int MakeRandomSleepTime(Ranodm ran, int range1, int range2)
+        public int MakeRandomSleepTime(Random ran, int 500, int 10000)
         {
-            var sleepTime = ran.Next(range1, range2);
+            var sleepTime = ran.Next(500, 10000);
             return sleepTime;
         }
 
@@ -52,16 +52,16 @@ namespace Cyberpunk_Cop_Data_PADD
             //add a global sleep timer here
 
             Random random = new Random();
-            int sleepTimer = random.Next(500, 5000); //generates a .5s to 5s delay
-            //Console.WriteLine(sleepTimer);
-            Thread.Sleep(sleepTimer); //pauses the program for a random interval
+           
+
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000)); //pauses the program for a random interval
             
             Console.WriteLine("Loading Memory...... 64kb");
             Console.WriteLine("Loading Memory...... 128kb");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
             Console.WriteLine("Loading Memory...... 256kb");
             Console.WriteLine("Loading Memory...... 512kb");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
 
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
@@ -88,33 +88,15 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Please Enter Password:");
             string userPassword = Console.ReadLine();
             Console.WriteLine("Connecting to GlobaNet Services.....");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
 
             Console.WriteLine("Loading Database, Please Wait.....");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
 
-            int loadingOne = random.Next(5, 15);
-            int loadingTwo = random.Next(16, 25);
-            int loadingThree = random.Next(26, 50);
-            int loadingFour = random.Next(51, 75);
-            int loadingFive = random.Next(76, 99);
-            int loadingSix = 100;
-
-            Console.WriteLine("Loading: " + loadingOne +"%");
-            Thread.Sleep(sleepTimer);
-            Console.WriteLine("Loading: " + loadingTwo + "%");
-            Thread.Sleep(sleepTimer);
-            Console.WriteLine("Loading: " + loadingThree+ "%");
-            Thread.Sleep(sleepTimer);
-            Console.WriteLine("Loading: " + loadingFour + "%");
-            Thread.Sleep(sleepTimer);
-            Console.WriteLine("Loading: " + loadingFive + "%");
-            Thread.Sleep(sleepTimer);
-            Console.WriteLine("Loading: " + loadingSix + "%");
 
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
 
             Console.WriteLine("TID Loaded");
             Console.WriteLine("User ID: " + userId);
@@ -123,10 +105,10 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Citizen ID: " + citizenID);
 
             Console.WriteLine("Loading, Please Wait.....");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
 
             Console.WriteLine("ID Found, Loading......");
-            Thread.Sleep(sleepTimer);
+            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
 
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames

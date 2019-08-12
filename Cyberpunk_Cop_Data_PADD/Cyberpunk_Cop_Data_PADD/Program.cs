@@ -89,23 +89,12 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Please Enter User ID:");
             string userId = Console.ReadLine();
             Console.WriteLine("Please Enter Password:");
+            string userPassword = Console.ReadLine();
 
 
-        ConsoleKeyInfo key; string userPassword = "";
-        do
-        {
 
-            key = Console.ReadKey(true);
-            if (key.Key != ConsoleKey.Backspace) //backspace should not work
-            {
 
-                userPassword += key.KeyChar;
-                Console.Write("*");
 
-            }
-
-        }   while (key.Key != ConsoleKey.Enter); //stops receiving keys once enter is pressed
-            Console.WriteLine();
 
 
             Console.WriteLine("Connecting to GlobaNet Services.....");

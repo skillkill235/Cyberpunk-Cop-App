@@ -5,6 +5,13 @@ namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
+        public int MakeRandomSleepTime(Ranodm ran, int range1, int range2)
+        {
+            var sleepTime = ran.Next(range1, range2);
+            return sleepTime;
+        }
+
+
         static void Main(string[] args)
         {
             /* Dev Notes

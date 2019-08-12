@@ -117,7 +117,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
 
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
-            Thread.Sleep(MakeRandomSleepTime(random, 500, 10000));
+            Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
             Console.WriteLine("TID Loaded");
             Console.WriteLine("User ID: " + userId);

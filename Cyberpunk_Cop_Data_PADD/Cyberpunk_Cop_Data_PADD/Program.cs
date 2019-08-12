@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Cyberpunk_Cop_Data_PADD
 {
@@ -30,9 +31,10 @@ namespace Cyberpunk_Cop_Data_PADD
             //Begin Boot Sequence
             //---------------------------------------------------------
 
-            Console.WriteLine("System Starting, Please Wait....."); // prints the boot loding message
+            Console.WriteLine("System Starting, Please Wait....."); // prints the boot loading message
 
-            //add random sleep time here
+            int rand = new Random();
+            Thread.Sleep(rand.Next((500, 5000)));
 
             Console.WriteLine("Loading Memory...... 64kb");
             Console.WriteLine("Loading Memory...... 128kb");
@@ -67,7 +69,7 @@ namespace Cyberpunk_Cop_Data_PADD
             string userPassword = Console.ReadLine();
             Console.WriteLine("Connecting to GlobaNet Services.....");
             //add random sleep time here
-            Console.WriteLine("Credentials Accepted, Welcome User " + userId + "!");
+            Console.WriteLine("Credentials Accepted, Welcome User " + userId);
 
 
 

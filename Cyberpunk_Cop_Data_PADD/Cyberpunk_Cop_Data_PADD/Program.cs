@@ -12,7 +12,7 @@ namespace Cyberpunk_Cop_Data_PADD
         }
     private const int lowerRange = 500;
     private const int middleRange = 5000;
-    private const int upperRange =10000
+    private const int upperRange = 10000
 
 
         static void Main(string[] args)

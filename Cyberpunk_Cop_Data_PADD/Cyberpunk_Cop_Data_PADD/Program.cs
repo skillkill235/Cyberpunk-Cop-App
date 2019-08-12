@@ -33,19 +33,23 @@ namespace Cyberpunk_Cop_Data_PADD
 
             Console.WriteLine("System Starting, Please Wait....."); // prints the boot loading message
 
-            int rand = new Random();
-            Thread.Sleep(rand.Next((500, 5000)));
+            //add a global sleep timer here
 
+            Random random = new Random();
+            int sleepTimer = random.Next(500, 5000); //generates a .5s to 5s delay
+            //Console.WriteLine(sleepTimer);
+            Thread.Sleep(sleepTimer); //pauses the program for a random interval
+            
             Console.WriteLine("Loading Memory...... 64kb");
             Console.WriteLine("Loading Memory...... 128kb");
-            //add random sleep time here
+            Thread.Sleep(sleepTimer);
             Console.WriteLine("Loading Memory...... 256kb");
             Console.WriteLine("Loading Memory...... 512kb");
-            //add random sleep time here
+            Thread.Sleep(sleepTimer);
 
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
-            //add random sleep time here, 30s minimum
+            Thread.Sleep(10000);
             Console.WriteLine("        /|");
             Console.WriteLine("       / |");
             Console.WriteLine("      /  |");
@@ -68,7 +72,7 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Please Enter Password:");
             string userPassword = Console.ReadLine();
             Console.WriteLine("Connecting to GlobaNet Services.....");
-            //add random sleep time here
+            Thread.Sleep(sleepTimer);
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
 
 

@@ -5,14 +5,27 @@ namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
-        public int MakeRandomSleepTime(Random ran, int range1, int range2);
+        private const int lowerRange = 500;
+        private const int middleRange = 5000;
+        private const int upperRange = 10000;
+
+        private static int RandomSleepTimer(int int1, int int2) //generates a random value between two ints
         {
-            var sleepTime = ran.Next(range1, range2);
+            var rnd = new Random();
+
+            int sleepTime = rnd.Next(int1, int2);
+
             return sleepTime;
         }
+<<<<<<< HEAD
+
+        
+
+=======
     private const int lowerRange = 500;
     private const int middleRange = 5000;
     private const int upperRange = 10000
+>>>>>>> parent of c75b250... last one before branching
 
 
         static void Main(string[] args)
@@ -31,6 +44,7 @@ namespace Cyberpunk_Cop_Data_PADD
              *       -Wanted Status
              *       -List of crimes
              *       -Generate random ticket/fines
+             *       -have the crimes be weighted towards wanted status and bounty
              *   -Display all the information above
              *   -Print out a ticket with all the above information
              *   -Prints a seperate ticket for tickets/fines
@@ -42,8 +56,7 @@ namespace Cyberpunk_Cop_Data_PADD
              *  
              *  MUST DO:
              *  -Make all sleep times random
-             *  -Make loading database timer based off % that was RNG
-             *  -add various indexes
+             *  -add various indexes/arrays
              *  
              *  WOULD LIKE:
              *  -Good ascii art
@@ -52,13 +65,14 @@ namespace Cyberpunk_Cop_Data_PADD
              * 
              * ---------------------------------------------------------
              */
-           
+
 
 
             //Begin Boot Sequence
             //---------------------------------------------------------
-
             Console.WriteLine("System Starting, Please Wait....."); // prints the boot loading message
+<<<<<<< HEAD
+=======
 
             //add a global sleep timer here
 
@@ -67,16 +81,21 @@ namespace Cyberpunk_Cop_Data_PADD
 
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange)); //pauses the program for a random interval
             
+>>>>>>> parent of c75b250... last one before branching
             Console.WriteLine("Loading Memory...... 64kb");
             Console.WriteLine("Loading Memory...... 128kb");
-            Thread.Sleep(MakeRandomSleepTime(random, lowerRange, upperRange));
+            Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
             Console.WriteLine("Loading Memory...... 256kb");
             Console.WriteLine("Loading Memory...... 512kb");
+<<<<<<< HEAD
+            Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
+=======
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
+>>>>>>> parent of c75b250... last one before branching
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
-            Thread.Sleep(10000);
+            Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
             Console.WriteLine("        /|");
             Console.WriteLine("       / |");
             Console.WriteLine("      /  |");
@@ -86,47 +105,57 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("  /      |");
             Console.WriteLine(" /       |");
             Console.WriteLine("/________|");
+            Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("TRIANGLE CORPS PRESENTS");
+            Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("Right Angle OS");
+            Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("v 0.01.23.453");
             //end of boot sequence
             //---------------------------------------------------------
 
             //begin usage
-
+            //---------------------------------------------------------
             Console.WriteLine("Please Enter User ID:");
             string userId = Console.ReadLine();
             Console.WriteLine("Please Enter Password:");
             string userPassword = Console.ReadLine();
-
-
-
-
-
-
-
             Console.WriteLine("Connecting to GlobaNet Services.....");
+<<<<<<< HEAD
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+=======
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
+>>>>>>> parent of c75b250... last one before branching
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
-
             Console.WriteLine("Loading Database, Please Wait.....");
+<<<<<<< HEAD
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+            Console.WriteLine("Loading Ticketing and Informational Database (TID)");
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+=======
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
 
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
+>>>>>>> parent of c75b250... last one before branching
             Console.WriteLine("TID Loaded");
             Console.WriteLine("User ID: " + userId);
             Console.Write("Enter 9 character alphanumeric ID Number: ");
             string citizenID = Console.ReadLine();
             Console.WriteLine("Citizen ID: " + citizenID);
-
             Console.WriteLine("Loading, Please Wait.....");
+<<<<<<< HEAD
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+            Console.WriteLine("ID Found, Loading......");
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+=======
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
 
             Console.WriteLine("ID Found, Loading......");
             Thread.Sleep(MakeRandomSleepTime(random, lowerRange,upperRange));
+>>>>>>> parent of c75b250... last one before branching
 
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames

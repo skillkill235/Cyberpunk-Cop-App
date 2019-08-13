@@ -13,6 +13,8 @@ namespace Cyberpunk_Cop_Data_PADD
         public string userID = "";
         public string userPasswoed = "";
 
+
+        //array framework laid out for later
         //private string[] name = new string[2];
         //private string[] surname = new string[2];
         //private string[] wanted = new string[3];

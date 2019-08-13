@@ -112,7 +112,6 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
             Console.WriteLine("Felonies: " + felonies.ToUpper());
             Console.ReadLine();
-
         }
 
 
@@ -176,11 +175,11 @@ namespace Cyberpunk_Cop_Data_PADD
 
             UserPW();
 
-            TIDloading();
+            TIDloading(userId);
 
-            TIDinterface();
+            TIDinterface(userId);
 
-            TIDresults();
+            TIDresults(citizenID, citizenName, citizenSurname, wantedStatus, bountyAmount, misdemeanors, felonies);
 
 
 

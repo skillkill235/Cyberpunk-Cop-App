@@ -9,9 +9,9 @@ namespace Cyberpunk_Cop_Data_PADD
         private const int middleRange = 5000;
         private const int upperRange = 10000;
 
-        private string citizenID = "";
-        private string userID = "";
-        private string userPasswoed = "";
+        public string citizenID = "";
+        public string userID = "";
+        public string userPasswoed = "";
 
         //private string[] name = new string[2];
         //private string[] surname = new string[2];

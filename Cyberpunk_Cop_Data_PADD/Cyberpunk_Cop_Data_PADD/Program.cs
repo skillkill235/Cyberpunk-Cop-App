@@ -9,12 +9,16 @@ namespace Cyberpunk_Cop_Data_PADD
         private const int middleRange = 5000;
         private const int upperRange = 10000;
 
-        private string[] name = new string[2];
-        private string[] surname = new string[2];
-        private string[] wanted = new string[3];
-        private string[] bounty = new string[2];
-        private string[] misdemeanors = new string[2];
-        private string[] felonies = new string[2];
+        private string citizenID = "";
+        private string userID = "";
+        private string userPasswoed = "";
+
+        //private string[] name = new string[2];
+        //private string[] surname = new string[2];
+        //private string[] wanted = new string[3];
+        //private string[] bounty = new string[2];
+        //private string[] misdemeanors = new string[2];
+        //private string[] felonies = new string[2];
 
 
 
@@ -58,12 +62,22 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("v 0.01.23.453");
         }
 
-        public static string UserLogin()
+        public static string UserID()
         {
             Console.WriteLine("Please Enter User ID:");
             string userId = Console.ReadLine();
+            return (userId);
+        }
+
+        public static string UserPW()
+        {
             Console.WriteLine("Please Enter Password:");
             string userPassword = Console.ReadLine();
+            return (userPassword);
+        }
+
+        public static void TIDloading()
+        {
             Console.WriteLine("Connecting to GlobaNet Services.....");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
             Console.WriteLine("Credentials Accepted, Welcome User " + userId);
@@ -72,6 +86,10 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
             Console.WriteLine("TID Loaded");
+        }
+
+        public static string TIDinterface()
+        {
             Console.WriteLine("User ID: " + userId);
             Console.Write("Enter 9 character alphanumeric ID Number: ");
             string citizenID = Console.ReadLine();
@@ -80,7 +98,21 @@ namespace Cyberpunk_Cop_Data_PADD
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
             Console.WriteLine("ID Found, Loading......");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
-            return (userId, userPassword, citizenID);
+            return (citizenID);
+
+        }
+
+        public static string TIDresults()
+        {
+            Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
+            Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
+            Console.WriteLine("Wanted Status: " + wantedStatus.ToUpper());
+            Console.WriteLine("Bounty: " + bountyAmount.ToUpper());
+            Console.WriteLine("List of previous violations: ");
+            Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
+            Console.WriteLine("Felonies: " + felonies.ToUpper());
+            Console.ReadLine();
+
         }
 
 
@@ -125,13 +157,12 @@ namespace Cyberpunk_Cop_Data_PADD
              * 
              * ---------------------------------------------------------
              */
+
+
+            string userId = "";
+            string userPassword = "";
             string citizenID = "";
-
-            BootLoading();
-
-            UserLogin();
-
-
+      
             string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
             string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
             string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
@@ -139,18 +170,17 @@ namespace Cyberpunk_Cop_Data_PADD
             string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
             string felonies = "None on record"; //same as line above
 
-            Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
-            Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
-            Console.WriteLine("Wanted Status: " + wantedStatus.ToUpper());
-            Console.WriteLine("Bounty: " + bountyAmount.ToUpper());
-            Console.WriteLine("List of previous violations: ");
-            Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
-            Console.WriteLine("Felonies: " + felonies.ToUpper());
-            Console.ReadLine();
+            BootLoading();
 
+            UserID();
 
+            UserPW();
 
+            TIDloading();
 
+            TIDinterface();
+
+            TIDresults();
 
 
 

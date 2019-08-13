@@ -11,7 +11,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
         public string citizenID = "";
         public string userID = "";
-        public string userPasswoed = "";
+        public string userPassword = "";
 
 
         //array framework laid out for later
@@ -46,16 +46,16 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
             Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
-            Console.WriteLine(" ______          ");
-            Console.WriteLine("|__||__|     //||");
-            Console.WriteLine("   ||       // ||");
-            Console.WriteLine("   ||      //  ||");
-            Console.WriteLine("   ||     //   ||");
-            Console.WriteLine("   ||    //    ||");
-            Console.WriteLine("   ||   //_____||");
-            Console.WriteLine("   ||  //______||");
-            Console.WriteLine("   || //       ||");
-            Console.WriteLine("   ||//        ||");
+            Console.WriteLine(" _______       _______________   ");
+            Console.WriteLine("|__   __|     / /| |__________|  ");
+            Console.WriteLine("   | |       / / | |             ");
+            Console.WriteLine("   | |      / /  | |             ");
+            Console.WriteLine("   | |     / /   | |             ");
+            Console.WriteLine("   | |    / /    | |             ");
+            Console.WriteLine("   | |   / /_____| |             ");
+            Console.WriteLine("   | |  / /______| |             ");
+            Console.WriteLine("   | | / /       | |__________   ");
+            Console.WriteLine("   |_|/_/        |_|__________|  ");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("TRIANGLE CORPS PRESENTS");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
@@ -114,6 +114,7 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
             Console.WriteLine("Felonies: " + felonies.ToUpper());
             Console.ReadLine();
+            return;
         }
 
 

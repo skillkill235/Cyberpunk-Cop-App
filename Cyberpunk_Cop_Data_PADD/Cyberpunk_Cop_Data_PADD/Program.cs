@@ -49,8 +49,10 @@ namespace Cyberpunk_Cop_Data_PADD
              * ---------------------------------------------------------
              *  
              *  MUST DO:
-             *  -Make all sleep times random
+             *  -Make all sleep times random DONE
              *  -add various indexes/arrays
+             *  -add password masking
+             *  
              *  
              *  WOULD LIKE:
              *  -Good ascii art
@@ -74,15 +76,16 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Memory Loaded");
             Console.WriteLine("Booting OS, Please Wait.....");
             Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
-            Console.WriteLine("        /|");
-            Console.WriteLine("       / |");
-            Console.WriteLine("      /  |");
-            Console.WriteLine("     /   |");
-            Console.WriteLine("    /    |");
-            Console.WriteLine("   /     |");
-            Console.WriteLine("  /      |");
-            Console.WriteLine(" /       |");
-            Console.WriteLine("/________|");
+            Console.WriteLine(" ______          ");
+            Console.WriteLine("|__||__|     //||");
+            Console.WriteLine("   ||       // ||");
+            Console.WriteLine("   ||      //  ||");
+            Console.WriteLine("   ||     //   ||");
+            Console.WriteLine("   ||    //    ||");
+            Console.WriteLine("   ||   //_____||");
+            Console.WriteLine("   ||  //______||");
+            Console.WriteLine("   || //       ||");
+            Console.WriteLine("   ||//        ||");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("TRIANGLE CORPS PRESENTS");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));

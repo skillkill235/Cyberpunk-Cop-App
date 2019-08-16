@@ -24,6 +24,7 @@ namespace Cyberpunk_Cop_Data_PADD
         //array framework laid out for later
         //private string[] name = new string[2];
         //private string[] surname = new string[2];
+        //private string[] midInitial = new string[2]
         //private string[] wanted = new string[3];
         //private string[] bounty = new string[2];
         //private string[] misdemeanors = new string[2];
@@ -44,25 +45,35 @@ namespace Cyberpunk_Cop_Data_PADD
         public static void BootLoading()
         {
             Console.WriteLine("System Starting, Please Wait....."); // prints the boot loading message
-            Console.WriteLine("Loading Memory...... 64kb");
-            Console.WriteLine("Loading Memory...... 128kb");
+            Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
+            Console.WriteLine("Loading Memory...... 64gb");
+            Console.WriteLine("Loading Memory...... 128gb");
             Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
-            Console.WriteLine("Loading Memory...... 256kb");
-            Console.WriteLine("Loading Memory...... 512kb");
+            Console.WriteLine("Loading Memory...... 256gb");
+            Console.WriteLine("Loading Memory...... 512gb");
             Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
             Console.WriteLine("Memory Loaded");
+            Console.WriteLine("Loading Bios v 0.12.03.23");
+            Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
+            Console.WriteLine("     Main Processor:              TAC R9990 @ 7.25 GHz");
+            Console.WriteLine("     Mathematics Co-Processor:    UMK 42069");
+            Console.WriteLine("     Display Adapter Type:        MDA (Video Bios Present)");
+            Console.WriteLine("     Display Resolution:          720 x 350 @ 50Hz");
+            Console.WriteLine("     Drives Connected             Drive 0: 1.44TB, TAC M.2 NVME SSD");
+            Console.WriteLine("     Total Conventional RAM:      512gb");
+            Console.WriteLine("     Found BIOS Extension ROM at F0080, initializing....");
             Console.WriteLine("Booting OS, Please Wait.....");
             Thread.Sleep(RandomSleepTimer(lowerRange, upperRange));
             Console.WriteLine(" _______       _______________   ");
-            Console.WriteLine("|__   __|     / /| |__________|  ");
+            Console.WriteLine("|__   __|     / _   __________|  ");
             Console.WriteLine("   | |       / / | |             ");
             Console.WriteLine("   | |      / /  | |             ");
             Console.WriteLine("   | |     / /   | |             ");
             Console.WriteLine("   | |    / /    | |             ");
             Console.WriteLine("   | |   / /_____| |             ");
-            Console.WriteLine("   | |  / /______| |             ");
+            Console.WriteLine("   | |  /  ______  |             ");
             Console.WriteLine("   | | / /       | |__________   ");
-            Console.WriteLine("   |_|/_/        |_|__________|  ");
+            Console.WriteLine("   |_|/_/        |____________|  ");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("TRIANGLE CORPS PRESENTS");
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
@@ -113,12 +124,19 @@ namespace Cyberpunk_Cop_Data_PADD
 
         public static void TIDresults()
         {
-            Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Citizen ID: " + citizenID);
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Wanted Status: " + wantedStatus.ToUpper());
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Bounty: " + bountyAmount.ToUpper());
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("List of previous violations: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("Misdemeanors: " + misdemeanors.ToUpper());
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Felonies: " + felonies.ToUpper());
             Console.ReadLine();
             return;

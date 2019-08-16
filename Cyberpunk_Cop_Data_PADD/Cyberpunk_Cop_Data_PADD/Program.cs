@@ -9,9 +9,16 @@ namespace Cyberpunk_Cop_Data_PADD
         private const int middleRange = 5000;
         private const int upperRange = 10000;
 
-        public string citizenID = "";
-        public string userID = "";
-        public string userPassword = "";
+        public static string citizenID = "";
+        public static string userID = "";
+        public static string userPassword = "";
+
+        public static string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
+        public static string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
+        public static string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
+        public static string bountyAmount = "None Available"; //only if wanted
+        public static string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
+        public static string felonies = "None on record"; //same as line above
 
 
         //array framework laid out for later
@@ -67,8 +74,8 @@ namespace Cyberpunk_Cop_Data_PADD
         public static string UserID()
         {
             Console.WriteLine("Please Enter User ID:");
-            string userId = Console.ReadLine();
-            return (userId);
+            string userID = Console.ReadLine();
+            return (userID);
         }
 
         public static string UserPW()
@@ -82,7 +89,7 @@ namespace Cyberpunk_Cop_Data_PADD
         {
             Console.WriteLine("Connecting to GlobaNet Services.....");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
-            Console.WriteLine("Credentials Accepted, Welcome User " + userId);
+            Console.WriteLine("Credentials Accepted, Welcome User " + userID);
             Console.WriteLine("Loading Database, Please Wait.....");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
@@ -92,7 +99,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
         public static string TIDinterface()
         {
-            Console.WriteLine("User ID: " + userId);
+            Console.WriteLine("User ID: " + userID);
             Console.Write("Enter 9 character alphanumeric ID Number: ");
             string citizenID = Console.ReadLine();
             Console.WriteLine("Citizen ID: " + citizenID);
@@ -104,7 +111,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
         }
 
-        public static string TIDresults()
+        public static void TIDresults()
         {
             Console.WriteLine("Citizen ID: " + citizenID.ToUpper());
             Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
@@ -115,6 +122,7 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Felonies: " + felonies.ToUpper());
             Console.ReadLine();
             return;
+            
         }
 
 
@@ -161,16 +169,7 @@ namespace Cyberpunk_Cop_Data_PADD
              */
 
 
-            string userId = "";
-            string userPassword = "";
-            string citizenID = "";
-      
-            string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
-            string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
-            string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
-            string bountyAmount = "None Available"; //only if wanted
-            string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
-            string felonies = "None on record"; //same as line above
+
 
             BootLoading();
 
@@ -178,11 +177,11 @@ namespace Cyberpunk_Cop_Data_PADD
 
             UserPW();
 
-            TIDloading(userId);
+            TIDloading();
 
-            TIDinterface(userId);
+            TIDinterface();
 
-            TIDresults(citizenID, citizenName, citizenSurname, wantedStatus, bountyAmount, misdemeanors, felonies);
+            TIDresults();
 
 
 

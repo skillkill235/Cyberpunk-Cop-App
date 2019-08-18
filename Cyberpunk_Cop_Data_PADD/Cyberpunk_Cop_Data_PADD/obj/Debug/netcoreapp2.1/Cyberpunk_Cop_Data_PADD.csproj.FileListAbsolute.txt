@@ -9,3 +9,14 @@ C:\Users\mKevi\Desktop\Cyberpunk Cop Thingy\Console App\Cyberpunk Cop App\Cyberp
 C:\Users\mKevi\Desktop\Cyberpunk Cop Thingy\Console App\Cyberpunk Cop App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.AssemblyInfo.cs
 C:\Users\mKevi\Desktop\Cyberpunk Cop Thingy\Console App\Cyberpunk Cop App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.dll
 C:\Users\mKevi\Desktop\Cyberpunk Cop Thingy\Console App\Cyberpunk Cop App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.pdb
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\bin\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.deps.json
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\bin\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.runtimeconfig.json
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\bin\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.runtimeconfig.dev.json
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\bin\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.dll
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\bin\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.pdb
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.csprojAssemblyReference.cache
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.csproj.CoreCompileInputs.cache
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.AssemblyInfoInputs.cache
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.AssemblyInfo.cs
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.dll
+C:\Users\mKevi\OneDrive\Desktop\Cyberpunk-Cop-App\Cyberpunk_Cop_Data_PADD\Cyberpunk_Cop_Data_PADD\obj\Debug\netcoreapp2.1\Cyberpunk_Cop_Data_PADD.pdb

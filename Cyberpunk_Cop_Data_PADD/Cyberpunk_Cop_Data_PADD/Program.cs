@@ -100,7 +100,7 @@ namespace Cyberpunk_Cop_Data_PADD
         {
             Console.WriteLine("Connecting to GlobaNet Services.....");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
-            Console.WriteLine("Credentials Accepted, Welcome User " + userID);
+            Console.WriteLine("Credentials Accepted, Welcome User " + userID); //there is a bug here, does not output userID to console
             Console.WriteLine("Loading Database, Please Wait.....");
             Thread.Sleep(RandomSleepTimer(middleRange, upperRange));
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
@@ -125,7 +125,7 @@ namespace Cyberpunk_Cop_Data_PADD
         public static void TIDresults()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Citizen ID: " + citizenID);
+            Console.WriteLine("Citizen ID: " + citizenID); //bug here, does not output citizenID to console
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
             Console.ForegroundColor = ConsoleColor.DarkRed;

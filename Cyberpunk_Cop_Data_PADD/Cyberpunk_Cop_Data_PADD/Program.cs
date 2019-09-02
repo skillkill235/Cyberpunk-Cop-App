@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Threading;
 
+
 namespace Cyberpunk_Cop_Data_PADD
 {
     class Program
     {
-        private const int lowerRange = 500;
+        private const int lowerRange = 500; // in miliseconds
         private const int middleRange = 5000;
         private const int upperRange = 10000;
 
@@ -42,9 +43,9 @@ namespace Cyberpunk_Cop_Data_PADD
             return sleepTime;
         }
 
-        public static void BootLoading()
+        public static void BootLoading() // prints the boot loading message
         {
-            Console.WriteLine("System Starting, Please Wait....."); // prints the boot loading message
+            Console.WriteLine("System Starting, Please Wait....."); 
             Thread.Sleep(RandomSleepTimer(lowerRange, middleRange));
             Console.WriteLine("Loading Memory...... 64gb");
             Console.WriteLine("Loading Memory...... 128gb");
@@ -82,14 +83,14 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("v 0.01.23.453");
         }
 
-        public static string UserID()
+        public static string UserID() //asks for user input in form of userID, returns the string userID
         {
             Console.WriteLine("Please Enter User ID:");
             string userID = Console.ReadLine();
             return (userID);
         }
 
-        public static string UserPW()
+        public static string UserPW() //asks for user input in for of userPassword
         {
             Console.WriteLine("Please Enter Password:");
             string userPassword = Console.ReadLine();
@@ -145,7 +146,6 @@ namespace Cyberpunk_Cop_Data_PADD
 
 
 
-
         static void Main(string[] args)
         {
             /* Dev Notes
@@ -167,6 +167,7 @@ namespace Cyberpunk_Cop_Data_PADD
              *   -Print out a ticket with all the above information
              *   -Prints a seperate ticket for tickets/fines
              *   -Stores the two above tickets in .txt files
+             *   
              *---------------------------------------------------------
              * 
              * To Do List
@@ -196,7 +197,7 @@ namespace Cyberpunk_Cop_Data_PADD
             UserPW();
 
             TIDloading();
-
+ 
             TIDinterface();
 
             TIDresults();

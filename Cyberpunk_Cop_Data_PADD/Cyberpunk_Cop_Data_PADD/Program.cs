@@ -134,7 +134,27 @@ namespace Cyberpunk_Cop_Data_PADD
         public static string UserPW() //asks for user input in for of userPassword
         {
             Console.WriteLine("Please Enter Password:");
-            string userPassword = Console.ReadLine();
+            ConsoleKeyInfo key;
+            do
+            {
+                key = Console.ReadKey(true);
+
+                //Backspace should not work
+                if (key.Key != ConsoleKey.Backspace)
+                {
+                    userPassword += key.KeyChar;
+                    Console.Write("*");
+                }
+                else
+                {
+                    Console.Write("\b");
+                }
+            }
+            //Stops receiving keys once enter is pressed
+            while (key.Key != ConsoleKey.Enter);
+
+            Console.WriteLine();
+
             return (userPassword);
         }
 

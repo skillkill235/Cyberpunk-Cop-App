@@ -1,67 +1,63 @@
 ﻿using System;
 using System.Threading;
 
-
 namespace Cyberpunk_Cop_Data_PADD
 {
     /* Dev Notes
- *---------------------------------------------------------
- * This is a console app for a cyberpunk cop data PADD written in C#
- * It's basic functions are to:
- *   -Take user input in form of a random 9 digit alphanumeric code
- *   -Based on above 9 digit code, generate the following
- *       -Name
- *       -Age
- *       -Expanded Citizen Id
- *       -Date of Birth (custom date system)
- *       -Randomly generated finger and retinal prints
- *       -Wanted Status
- *       -List of crimes
- *       -Generate random ticket/fines
- *       -have the crimes be weighted towards wanted status and bounty
- *   -Display all the information above
- *   -Print out a ticket with all the above information
- *   -Prints a seperate ticket for tickets/fines
- *   -Stores the two above tickets in .txt files
- *   
- *---------------------------------------------------------
- * 
- * To Do List
- * ---------------------------------------------------------
- *  
- *  MUST DO:
- *  -Make all sleep times random DONE
- *  -add various indexes/arrays
- *  -add password masking
- *  
- *  
- *  WOULD LIKE:
- *  -Good ascii art
- *  -more flavor
- *  -do colored text DONE
- * 
- * ---------------------------------------------------------
- */
+*---------------------------------------------------------
+* This is a console app for a cyberpunk cop data PADD written in C#
+* It's basic functions are to:
+*   -Take user input in form of a random 9 digit alphanumeric code
+*   -Based on above 9 digit code, generate the following
+*       -Name
+*       -Age
+*       -Expanded Citizen Id
+*       -Date of Birth (custom date system)
+*       -Randomly generated finger and retinal prints
+*       -Wanted Status
+*       -List of crimes
+*       -Generate random ticket/fines
+*       -have the crimes be weighted towards wanted status and bounty
+*   -Display all the information above
+*   -Print out a ticket with all the above information
+*   -Prints a seperate ticket for tickets/fines
+*   -Stores the two above tickets in .txt files
+*  
+*---------------------------------------------------------
+*
+* To Do List
+* ---------------------------------------------------------
+*  
+*  MUST DO:
+*  -Make all sleep times random DONE
+*  -add various indexes/arrays
+*  -add password masking
+*  
+*  
+*  WOULD LIKE:
+*  -Good ascii art
+*  -more flavor
+*  -do colored text DONE
+*
+* ---------------------------------------------------------
+*/
 
-
-
-    class Program
+    class MainMenu
     {
         private const int lowerRange = 500; // in miliseconds
         private const int middleRange = 5000;
         private const int upperRange = 10000;
 
-        public static string citizenID = "";
-        public static string userID = "";
-        public static string userPassword = "";
+        public string citizenID = "";
+        public string userID = "";
+        public string userPassword = "";
 
-        public static string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
-        public static string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
-        public static string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
-        public static string bountyAmount = "None Available"; //only if wanted, based off of citizenID
-        public static string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
-        public static string felonies = "None on record"; //same as line above
-
+        public string citizenName = "Jefferey"; //placeholder for a variable that references an index of names
+        public string citizenSurname = "Colmbs"; //place holder for a variable that references an index of surnames
+        public string wantedStatus = "Not Wanted"; //placeholder for a variable that contains their wanted status
+        public string bountyAmount = "None Available"; //only if wanted, based off of citizenID
+        public string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
+        public string felonies = "None on record"; //same as line above
 
         //array framework laid out for later
         //private string[] firstName = new string[2];
@@ -72,8 +68,20 @@ namespace Cyberpunk_Cop_Data_PADD
         //private string[] misdemeanors = new string[2];
         //private string[] felonies = new string[2];
 
+        public void Start()
+        {
+            BootLoading();
 
+            UserID();
 
+            UserPW();
+
+            TIDloading();
+
+            TIDinterface();
+
+            TIDresults();
+        }
 
         private int RandomNumberGen(int int1, int int2) //generates a random value between two ints
         {
@@ -86,7 +94,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
         public void BootLoading() // prints the boot loading message
         {
-            Console.WriteLine("System Starting, Please Wait....."); 
+            Console.WriteLine("System Starting, Please Wait.....");
             Thread.Sleep(RandomNumberGen(lowerRange, middleRange));
             Console.WriteLine("Loading Memory...... 64gb");
             Console.WriteLine("Loading Memory...... 128gb");
@@ -124,11 +132,10 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("v 0.01.23.453");
         }
 
-        public string UserID() //asks for user input in form of userID, returns the string userID
+        public void UserID() //asks for user input in form of userID, returns the string userID
         {
             Console.WriteLine("Please Enter User ID:");
-            string userID = Console.ReadLine();
-            return (userID);
+            userID = Console.ReadLine();
         }
 
         public string UserPW() //asks for user input in for of userPassword
@@ -202,30 +209,6 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.WriteLine("Felonies: " + felonies.ToUpper());
             Console.ReadLine();
             return;
-            
-        }
-
-
-
-         void Main(string[] args)
-        {
-
-
-            BootLoading();
-
-            UserID();
-
-            UserPW();
-
-            TIDloading();
- 
-            TIDinterface();
-
-            TIDresults();
-
-
-
-
 
         }
     }

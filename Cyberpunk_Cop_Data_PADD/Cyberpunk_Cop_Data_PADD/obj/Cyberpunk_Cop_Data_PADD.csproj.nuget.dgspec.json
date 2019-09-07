@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mKevi\\OneDrive\\Desktop\\Cyberpunk-Cop-App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj": {}
+    "C:\\Users\\mKevi\\Desktop\\Cyberpunk Cop Thingy\\Console App\\Cyberpunk Cop App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mKevi\\OneDrive\\Desktop\\Cyberpunk-Cop-App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj": {
+    "C:\\Users\\mKevi\\Desktop\\Cyberpunk Cop Thingy\\Console App\\Cyberpunk Cop App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mKevi\\OneDrive\\Desktop\\Cyberpunk-Cop-App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj",
+        "projectUniqueName": "C:\\Users\\mKevi\\Desktop\\Cyberpunk Cop Thingy\\Console App\\Cyberpunk Cop App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj",
         "projectName": "Cyberpunk_Cop_Data_PADD",
-        "projectPath": "C:\\Users\\mKevi\\OneDrive\\Desktop\\Cyberpunk-Cop-App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj",
+        "projectPath": "C:\\Users\\mKevi\\Desktop\\Cyberpunk Cop Thingy\\Console App\\Cyberpunk Cop App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD.csproj",
         "packagesPath": "C:\\Users\\mKevi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mKevi\\OneDrive\\Desktop\\Cyberpunk-Cop-App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\obj\\",
+        "outputPath": "C:\\Users\\mKevi\\Desktop\\Cyberpunk Cop Thingy\\Console App\\Cyberpunk Cop App\\Cyberpunk_Cop_Data_PADD\\Cyberpunk_Cop_Data_PADD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

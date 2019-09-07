@@ -31,7 +31,7 @@ namespace Cyberpunk_Cop_Data_PADD
 *  MUST DO:
 *  -Make all sleep times random DONE
 *  -add various indexes/arrays
-*  -add password masking
+*  -add password masking DONE
 *  
 *  
 *  WOULD LIKE:
@@ -59,14 +59,7 @@ namespace Cyberpunk_Cop_Data_PADD
         public string misdemeanors = "1x Drunk in Public"; //refers to an index with multiple crimes, collates them
         public string felonies = "None on record"; //same as line above
 
-        //array framework laid out for later
-        //private string[] firstName = new string[2];
-        //private string[] lastName = new string[2];
-        //private string[] midInitial = new string[2]
-        //private string[] wantedStatus = new string[3];
-        //private string[] bountyAmount = new string[2];
-        //private string[] misdemeanors = new string[2];
-        //private string[] felonies = new string[2];
+        
 
         public void Start()
         {
@@ -169,7 +162,7 @@ namespace Cyberpunk_Cop_Data_PADD
         {
             Console.WriteLine("Connecting to GlobaNet Services.....");
             Thread.Sleep(RandomNumberGen(middleRange, upperRange));
-            Console.WriteLine("Credentials Accepted, Welcome User " + userID); //there is a bug here, does not output userID to console
+            Console.WriteLine("Credentials Accepted, Welcome User " + userID); 
             Console.WriteLine("Loading Database, Please Wait.....");
             Thread.Sleep(RandomNumberGen(middleRange, upperRange));
             Console.WriteLine("Loading Ticketing and Informational Database (TID)");
@@ -181,7 +174,7 @@ namespace Cyberpunk_Cop_Data_PADD
         {
             Console.WriteLine("User ID: " + userID);
             Console.Write("Enter 9 character alphanumeric ID Number: ");
-            string citizenID = Console.ReadLine();
+            citizenID = Console.ReadLine();
             Console.WriteLine("Citizen ID: " + citizenID);
             Console.WriteLine("Loading, Please Wait.....");
             Thread.Sleep(RandomNumberGen(middleRange, upperRange));
@@ -194,7 +187,7 @@ namespace Cyberpunk_Cop_Data_PADD
         public void TIDresults()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("Citizen ID: " + citizenID); //bug here, does not output citizenID to console
+            Console.WriteLine("Citizen ID: " + citizenID);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
             Console.ForegroundColor = ConsoleColor.DarkRed;

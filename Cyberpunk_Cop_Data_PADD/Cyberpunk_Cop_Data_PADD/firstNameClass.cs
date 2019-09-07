@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Cyberpunk_Cop_Data_PADD
 {
-    class firstName
+    public class firstNameClass
     {
 
-        private List<string> firstNames = new List<string>()
+
+        public List<string> firstNames = new List<string>()
         {
             "Derix",
             "Kamron",
@@ -55,6 +56,11 @@ namespace Cyberpunk_Cop_Data_PADD
             "Kai",
             "Graeme",
             "Maxtom",
+            "Gayge",
+            "Jayedn",
+            "Ahlan",
+            "Averyx",
+            "Aracelle",
 
 
 

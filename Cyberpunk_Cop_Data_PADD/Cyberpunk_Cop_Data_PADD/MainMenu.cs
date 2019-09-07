@@ -63,6 +63,7 @@ namespace Cyberpunk_Cop_Data_PADD
 
         public void Start()
         {
+            
             BootLoading();
 
             UserID();
@@ -75,6 +76,9 @@ namespace Cyberpunk_Cop_Data_PADD
 
             TIDresults();
         }
+
+
+
 
         private int RandomNumberGen(int int1, int int2) //generates a random value between two ints
         {
@@ -189,7 +193,7 @@ namespace Cyberpunk_Cop_Data_PADD
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Citizen ID: " + citizenID);
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Registered Name: " + citizenName.ToUpper() + " " + citizenSurname.ToUpper());
+            Console.WriteLine("Registered Name: " + firstNameClass.firstNames[RandomNumberGen(1, 50)].ToUpper() + " " + citizenSurname.ToUpper());
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("Wanted Status: " + wantedStatus.ToUpper());
             Console.ForegroundColor = ConsoleColor.Green;
